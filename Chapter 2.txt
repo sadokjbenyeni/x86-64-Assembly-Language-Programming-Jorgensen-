@@ -1,0 +1,64 @@
+1) Draw a picture of the Von Neumann Architecture.
+    
+    CPU         RAM
+_____|___________|________________ BUS
+          |             | 
+         I/O           ROM
+
+2) What architecture component connects the memory to the CPU?
+    - Bus(Interconnection)
+
+3) Where are programs stored when the computer is turned off?
+    = Second storage (ROM)
+
+4) Where must programs be located when they are executing?
+    - Primary storage (RAM)
+
+5) How does cache memory help overall performance?
+    - Cache memory keeps the address of recently executed programs which makes recalling faster.
+
+6) How many bytes does a C++ integer declared with the declaration int use?
+    - Integer declaration counts for 4 bytes in C++
+
+7) On the Intel X86-64 architecture, how many bytes can be stored at each address?
+    - 1 byte
+
+8) Given the 32-bit hex  004C4B4016
+  what is the: Least Significant Byte (LSB): 6
+               Most Significant Byte (MSB): 0
+
+9) Given the 32-bit hex  004C4B4016
+ , show the little-endian memory layout showing each byte in memory.
+ 31 30 29 28 27 26 25 24 23 22 21 20 19 18 17 16 15 14 13 12 11 10 9 8 7 6 5 4 3 2 1 0
+  |     4     |     C     |     4     |     B     |    4     |    0    |   1   |  6   |            
+
+10) Draw a picture of the layout for the rax register.
+rax = |      32 bits            |                 eax(32bits)                   |
+                                |                       |      ax(16bits)       | 
+                                |                       | ah(8bits) | al(8bits) |
+
+11) How many bits does each of the following represent:
+
+1. al = 8-bits
+2. rcx = 64-bits
+3. bx = 16-bits
+4. edx = 32-bits
+5. r11 = 64-bits
+6. r8b = 8-bits
+7. sil = 8-bits
+8. r14w = 16-bits
+
+12) Which register points to the next instruction to be executed?
+    - Base Pointer Register
+
+13) Which register points to the current top of the stack?
+    - Stack Pointer Register
+
+14) If al is set to 0516 and ax is set to 000716, eax is set to 0000002016, and rax is set to 000000000000000016, and show the final complete contents of the complete rax register.
+
+15) If the rax register is set to  81,985,529,216,486,89510  (123456789ABCDEF16), what are the contents of the following registers in hex?
+
+1. al = 16
+2. ax = EF 16
+3. eax = ABCD EF16
+4. rax = 2345 6789 ABCD EF16
