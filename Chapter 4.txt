@@ -27,4 +27,4 @@
 
 8) What are the required declarations to signify the start of a program (in the text section)?
     global _start
-    ._start:
+    _start:
