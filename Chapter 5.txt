@@ -1,0 +1,26 @@
+1) What is the relationship between assembly language and machine language?
+    - Assembly language is what the programmer writes which will be transfomed into machine language through several steps.
+
+2) What actions are performed on the first pass of the assembler?
+    - Create symbol table, expand macros, evaluate constant expressions.
+
+3) What actions are performed on the second pass of the assembler?
+    - Final generation of code, creation of list file, create object file.
+
+4) What actions are performed by the linker?
+    - Combine one or more object files into a single executable.
+
+5) What actions are performed by the loader?
+    - Load the program from secondary storage into the primary storage. 
+
+6) Provide an example of a constant expression.
+    - dVar db 12
+
+7) Draw a diagram of the entire assemble, link, and load process.
+    - Assembly language source files(.a) -> |ASSEMBLER| -> List file + object file(.o) -> |LINKER| -> executable files(.exe) -> |LOADER| -> Loaded in ram + shared object files (.dll)
+
+8) When is a shared object file linked with a program?
+    - Before loading the execuatable in RAM
+
+9) What is contained in the symbol table (two things)?
+    - Variable names and their respective addresses

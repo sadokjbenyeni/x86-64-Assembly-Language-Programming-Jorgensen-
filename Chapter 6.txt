@@ -1,0 +1,54 @@
+1) How is the debugger started (from the commandline)?
+    - ddd <program>
+
+2) What option is required during the assemble and link step in order to ensure the program be easily debugged.
+    - -g dwarf2
+
+3) What does the run command do specifically?
+    - Execute the program to the first breakpoint
+
+4) What does the continue command do specifically?
+    - Continue execution to the next breakpoint
+
+5) How is the register window displayed?
+    - Status -> Registers
+
+6) There are three columns in the register window. The first shows the register. What do the other two columns show?
+    - The content of the register in hex and unsigned hex respectively.
+
+7) Once the debugger is started, how can the user exit?
+    - with command: quit (q)
+
+8) Describe how a break point is set (multiple ways).
+    - Right click and set breakpoint on the line number or in console using either the label or the line number: break <label>/ break <line number> 
+
+9) What is the debugger command to read debugger commands from a file?
+    - source <filename>
+
+10) When the DDD shows a green arrow pointing to an instruction, what does that mean?
+    - Current location of the process
+
+11) Provide the debugger command to display each of the following variables in decimal.
+bVar1 (byte sized variable)                         u/db &bVar1
+wVar1 (word sized variable)                         u/dw &wVar1
+dVar1 (double-word sized variable)                  u/dd &dVar1
+qVar1 (quadword sized variable)                     u/dq &qVar1
+bArr1 (30 element array of bytes)                   u/30db &bArr1
+wArr1 (50 element array of words)                   u/50dw &wArr1
+dArr1 (75 element array of double-words)            u/75dd &dArr1
+
+12) Provide the debugger command to display each of the following variables in hexadecimal format.
+bVar1 (byte sized variable)                         x/db &bVar1
+wVar1 (word sized variable)                         x/dw &wVar1
+dVar1 (double-word sized variable)                  x/dd &dVar1
+qVar1 (quadword sized variable)                     x/dq &qVar1
+bArr1 (30 element array of bytes)                   x/30db &bArr1
+wArr1 (50 element array of words)                   x/50dw &wArr1
+dArr1 (75 element array of double-words)            x/75dd &dArr1
+
+13) What is the debugger command to display the value at the current top of the stack?
+    x/ug  $rsp
+
+
+14) What is the debugger command to display five (5) values at the current top of the stack?
+    x/5ug  $rsp
