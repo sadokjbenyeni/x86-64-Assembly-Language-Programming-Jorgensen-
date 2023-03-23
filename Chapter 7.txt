@@ -1,0 +1,85 @@
+1) Which of the following instructions is legal / illegal? As appropriate, provide an explanation.
+    1. mov     rax, 54      LEGAL
+    2. mov     ax, 54       LEGAL
+    3. mov     al, 354      LEGAL
+    4. mov     rax, r11     LEGAL
+    5. mov     rax, r11d    LEGAL
+    6. mov     54, ecx      ILLEGAL
+    7. mov     rax, qword [qVar]  LEGAL
+    8. mov     rax, qword [bVar]  ILLEGAL
+    9. mov     rax, [qVar]  LEGAL
+    10. mov    rax, qVar    LEGAL
+    11. mov    eax, dword [bVar] LEGAL
+    12. mov    qword [qVar2], qword [qVar1] ILLEGAL
+    13. mov    qword [bVar2], qword [qVar1] ILLEGAL
+    14. mov    r15, 54  LEGAL
+    15. mov    r16, 54  LEGAL
+    16. mov    r11b, 54 LEGAL
+
+2) Explain what each of the following instructions does.
+1. movzx     rsi, byte [bVar1] ; Unsigned widening conversion 
+2. movsx     rsi, byte [bVar1] ; Signed widening conversion
+
+3) What instruction is used to:
+convert an unsigned byte in al into a word in ax.; movzx ax, byte [al]
+convert a signed byte in al into a word in ax.; movsx ax, byte [al]
+
+4) What instruction is used to:
+convert an unsigned word in ax into a double-word in eax.; movzx eax, dword [ax]
+convert a signed word in ax into a double-word in eax.; movsx eax, dword [ax]
+
+5) What instruction is used to:
+convert an unsigned word in ax into a double-word in dx:ax.; cwd dx:ax, byte [ax]
+convert a signed word in ax into a double-word in dx:ax.; cwd dx:ax, byte [ax]
+
+6) Explain the difference between the cwd instruction and the movsx instructions.
+cwd: Convert word in ax into double-word in dx:ax.   
+movsx: Convert word in ax into double-word in eax.   
+
+7) Explain why the explicit type specification (dword in this example) is required on the first instruction and is not required on the second instruction.
+1. add    dword [dVar], 1 ; Because immediate value 1 could be placed in any type.
+2. add    [dVar], eax ; Because type can be deduced from eax which is a double word.
+
+8) Given the following code fragment:
+    mov    rax, 9 ; rax: 0x0009
+    mov    rbx, 2 ; rbx: 0x0002
+    add    rbx, rax ; rax: 0x0009 rbx: 0x000B
+What would be in the rax and rbx registers after execution? Show answer in hex, full register size.
+
+9) Given the following code fragment:
+    mov    rax, 9 ; rax: 0x0009
+    mov    rbx, 2 ; rbx: 0x0002
+    sub    rax, rbx ; rax: 0x0007   rbx: 0x0002
+What would be in the rax and rbx registers after execution? Show answer in hex, full register size.
+
+10) Given the following code fragment:
+    mov    rax, 9 ; rax: 0x0009
+    mov    rbx, 2 ; rbx: 0x0002
+    sub    rbx, rax ; rax: 0x0009    rbx: 0xFFF9
+What would be in the rax and rbx registers after execution? Show answer in hex, full register size.
+
+11) Given the following code fragment:
+    mov    rax, 4 ; rax: 0x0004
+    mov    rbx, 3 ; rbx: 0x0003
+    imu1   rbx ; rax: 0x0004    rbx: 0x0009
+What would be in the rax and rdx registers after execution? Show answer in hex, full register size.
+
+12) Given the following code fragment:
+    mov    rax, 5 ; rax: 0x0005
+    cqo
+    mov    rbx, 3 ; rbx: 0x0003
+    idiv   rbx ; rax: 0x0001     rbx: 0x0003
+What would be in the rax and rdx registers after execution? Show answer in hex, full register size.
+
+13) Given the following code fragment:
+    mov   rax, 11 ; rax: 0x000B
+    cqo
+    mov   rbx, 4 ; rbx: 0x0004
+    idiv  rbx; rax: 0x0002    rbx: 0x0004
+What would be in the rax and rdx registers after execution? Show answer in hex, full register size.
+
+14) Explain why each of the following statements will not work.
+    1. mov    42, eax ; Assignement to immediate not allowed.
+    2. div    3 ; Operation on immediate not allowed.
+    3. mov    dword [num1], dword [num1] ; Assignement from to memory not allowed.
+    4. mov    dword [ax], 800 ; Wrong type identifier
