@@ -1,0 +1,40 @@
+1) Explain the difference between the following two instructions:
+    1. mov     rdx, qword [qVar1] ; Assigns the value of qVar1 to rdx.
+    2. mov     rdx, qVar1         ; Assigns the address of qVars to rdx. 
+
+2) What is the address mode of the source operand for each of the instructions listed below. Respond with Register, Immediate, Memory, or Illegal Instruction.
+    mov    <dest>, <source>       
+    mov    ebx, 14                ; Immediate
+    mov    ecx, dword [rbx]       ; Memory
+    mov    byte [rbx+4], 10       ; Immediate
+    mov    10, rcx                ; Illegal
+    mov    dl, ah                 ; Register
+    mov    ax, word [rsi+4]       ; Memory
+    mov    cx, word [rbx+rsi]     ; Memory
+    mov    ax, byte [rbx]         ; Illegal
+
+3) Given the following variable declarations and code fragment:
+    ans1     dd 7                 
+    mov      rax, 3               
+    mov      rbx, ans1
+    add      eax, dword [rbx]     ; eax: 0x000A
+What would be in the eax register after execution? Show answer in hex, full register size.
+
+4) Given the following variable declarations and code fragment:
+    list1     dd 2, 3, 4, 5, 6, 7 
+    mov rbx, list1
+    add rbx, 4
+    mov eax, dword [rbx] 
+    mov edx, dword [list1] ; eax: 0x0003  edx:0x0002
+What would be in the eax and edx registers after execution? Show answer in hex, full register size.
+
+5) Given the following variable declarations and code fragment:
+    lst     dd    2, 3, 5, 7, 9
+            mov     rsi, 4 
+            mov     eax, 1 
+            mov     rcx, 2
+    lp: add eax, dword [lst+rsi]
+            add     rsi, 4
+            loop    lp
+            mov     ebx, dword [lst]    ; eax: 0x000B  ebx: 0x0002  rcx: 0x0002  rsi: 0x0011
+What would be in the eax, ebx, rcx, and rsi registers after execution? Show answer in hex, full register size. Note, pay close attention to the register sizes (32-bit vs. 64-bit).
