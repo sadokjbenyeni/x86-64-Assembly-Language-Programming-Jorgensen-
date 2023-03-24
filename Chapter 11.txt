@@ -1,0 +1,17 @@
+1) Where is the macro definition placed in the assembly language source file?
+    - On top of the file
+
+2) When a macro is invoked, how many times is the code placed in the code segment?
+    - As many times as the macro gets invoked
+
+3) Explain why, in a macro, labels are typically preceded by a %% (double percent sign).
+    - To avoid confusion if the macro is invoked more than one time
+
+4) Explain what might happen if the %% is not included on a label?
+    - The assembler might think that the label is a macro and will go looking for its definition
+
+5) Is it legal to jump to a label that does not include the %%? If not legal, explain why. If legal, explain under what circumstances that might be useful.
+    - It is legal and might be useful to call a macro from another or to exit the macro to go back to the main program 
+
+6) When does the macro argument substitution occur? 
+    - During macro call
