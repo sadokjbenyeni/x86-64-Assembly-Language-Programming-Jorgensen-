@@ -1,0 +1,22 @@
+1.Which register refers to the top of the stack?
+    - rsp
+
+2.What happens as a result of a push rax instruction (two things)?
+    - rax value assigned on rsp current position then rsp decremented by value of 8(bytes)
+
+3.How many bytes of data does the pop rax instruction remove from the stack?
+    - 8 bytes
+4.Given the following code fragment:
+    mov     r10, 1 
+    mov     r11, 2 
+    mov     r12, 3 
+    push    r10 
+    push    r11 
+    push    r12 
+    pop     r10
+    pop     r11 
+    pop     r12     ;r10: 3       r11: 2      r12: 1
+What would be in the r10 , r11, and r12 registers after execution? Show answer in hex, full register size.
+
+5.Provide one advantage to the stack growing downward in memory.
+Efficient use of memory
