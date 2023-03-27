@@ -1,0 +1,59 @@
+1) What are the two main actions of a function call?
+    - Getting to and returning from a function call
+
+2) What are the two instructions that implement linkage?
+    - call and ret
+
+3) When arguments are passed using values, it is referred to as?
+    - Call by value
+
+4) When arguments are passed using addresses, it is referred to as?
+    - Call by reference
+
+5) If a function is called fifteen (15) times, how many times is the code placed in memory by the assembler?
+    - 15 times
+
+6) What happens during the execution of a call instruction (two things)?
+    - Place contents of the rip register on the stack/ Recall that the rip register points to the next instruction to be executed 
+
+7) According to the standard calling convention, as discussed in class, what is the purpose of the initial pushes and final pops within most procedures?
+    - Avoiding stack corruption and process crash
+
+8) If there are six (6) 64-bit integer arguments passed to a function, where specifically should each of the arguments be passed?
+    - They should be passed to 6 registers: rdi, rsi, rdx, rcx, r8, r9
+
+9) If there are six (6) 32-bit integer arguments passed to a function, where specifically should each of the arguments be passed?
+    - They should be passed to 3 registers: edi, esi, edx, ecx, r8d, r9d
+
+10) What does it mean when a register is designated as temporary?
+    - It means that he is preserved across a function call
+
+11) Name two temporary registers?
+    - rsp and rb
+
+12) What is the name for the set of items placed on the stack as part of a function call?
+    - stack-based arguments
+
+13) What does it mean when a function is referred to as a leaf function?
+    - A function that is referred to as a leaf function is a function that does not call another function
+    
+14) What is the purpose of the add rsp, <immediate> after the call statement?
+    - clear passed arguments
+
+15) If three arguments are passed on the stack, what is the value for the <immediate>?
+    - number of arguments * 8
+
+16) If there are seven (7) arguments passed to a function, and the function itself pushes the rbp, rbx, and r12 registers (in that order), what is the correct offset of the stack-based argument when using the standard calling convention?
+    - rbp + 8
+
+17) What, if any, is the limiting factor for how many times a function can be called?
+    - Memory size
+
+18) If a function must return a result for the variable sum, how should the sum variable be passed (call-by-reference or call-by-value)?
+    - By reference 
+
+19) If there are eight (8) arguments passed to a function, and the function itself pushes the rbp, rbx, and r12 registers (in that order), what are the correct offsets for each of the two stack-based arguments (7th and 8th) when using the standard calling convention?
+    - rbp + 8 and rbp + 16 respectively
+
+20) What is the advantage of using stack dynamic local variables (as opposed to using all global variables)?
+    - Less memory usage
