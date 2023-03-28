@@ -1,0 +1,16 @@
+1) What is the statement to declare the functions, func1() and func2(), as external assuming no arguments are needed for either function?
+    extern func1()  
+    extern func2()
+
+2) What is the statement to declare the functions, func1() and func2(), as external if two integer arguments are used for each function?
+    extern func1(int a, int b)
+    extern func2(int a, int b)
+
+3) What will happen if an external function is called but is not declared as external?
+    An error will be generated
+
+4) If an externally declared function is called but the programmer did not actually write the function, when would the error be flagged, assemble-time, link-time, or run-time?
+    Assemble-time
+
+5) If the “-g” option is omitted from the assemble and link commands, would the program be able to execute?
+    Yes, but not able to debug
