@@ -1,0 +1,20 @@
+1) When stack buffer overflow is caused deliberately as part of an attack it is referred as what?
+    Stack smashing
+
+2) What does it mean when a C function is considered unsafe?
+    In the function does not test against potential attacks
+
+3) Is a program that reads user input still vulnerable if the input buffer is sufficiently large (e.g., >1024 bytes)?
+    Yes
+
+4) How might an attacker determine if an interactive program is vulnerable to a buffer overflow attack?
+    Typing Significantly more characters than expected
+
+5) What is a “NOPslide”?
+    Is a sequence of NOP (no-operation) instructions meant to "slide" the CPU's instruction execution flow to its final, desired destination whenever the program branches to a memory address anywhere on the slide.
+
+6) The text example injected code to open a new shell. Provide at least one different idea for injected code that would cause problems.
+    Enter excessive data through shell as hex values to override the value of rip
+
+7) Name three techniques designed to prevent stack buffer overflow attacks.
+    Canaries, data execution prevention, data address space layout randomization
