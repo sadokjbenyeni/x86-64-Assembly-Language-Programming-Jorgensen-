@@ -1,0 +1,41 @@
+1) What is the end of line character or characters for Linux and Windows?
+    LF/CR
+
+2) Based on the explanations in this chapter, what is I/O buffering?
+    Loading secondary memory storage data in the primary memory storage
+
+3) In reference to a high-level language, where are the I/O buffering routines located?
+    In the operation system
+
+4) What is the advantage of hiding the I/O buffering complexity from the programmer?
+    Ease for the programmer
+
+5) What is the key advantage of performing I/O buffering (as opposed to reading one character at a time)?
+    Improved performance by requesting all at once instead on one at each time
+
+6) Why is it difficult to use the file read system service to read one text line from a file?
+    Because it is designed to read a chuck of the file
+
+7) In terms of the memory hierarchy, why is buffering advantageous?
+    It is less expensive in terms of run time access to main memory
+
+8) In terms of system overhead, why is buffering advantageous?
+    Reduces overhead associated system call as the program won't have to wait each time data is requested
+
+9) Why does the file read buffering algorithm require statically declared variables?
+    Dynamic variable cannot be maintained between calls
+
+10) How is the end of file recognized by the program?
+    Based on the number of characteres actually read
+
+11) Provide one, of many, reasons that a file read request might return an error even when the file has been opened successfully.
+    Corrupted data, hardware error, unrecoverable data    
+
+12) What must be done to address the case when the file size is an exact multiple of the buffer size?
+    Returned value of characters read is 0
+
+13) Why is the maximum length of the text line passed as an argument?
+    To ensure that the text line array is not overwritten
+
+14) How does the presented algorithm ensure that the very first call the myGetLine() will read the buffer?
+    Status value is TRUE
