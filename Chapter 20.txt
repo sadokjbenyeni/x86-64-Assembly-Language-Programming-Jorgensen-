@@ -1,0 +1,41 @@
+1) What is the operating system responsible for? Name some of the resources.
+    I/O, CPU, RAM, Storage
+
+2) What is an interrupt?
+    Is a pause or hold of an executing process
+
+3) What is an exception?
+    Is a interruption of execution to notify the OS about an important event
+
+4) What is an ISR and what is it for?
+    Interrupt Service Routine which is the code that is executed in response to an interrupt
+
+5) Where (name of the data structure) does the operating system obtain the address when an interrupt occurs and what is contained in it?
+    From the Interrupt Descriptor Table
+
+6) When an interrupt occurs, how is the appropriate offset into the IDT calculated?
+    Each IDT enty counts for 8 bytes
+
+7) What is the difference between the iret and ret instructions?
+    iret pops rFlags and rip registers
+
+8) Why does the OS use the interrupt mechanism instead of just performing a standard call.
+    Due to the importance and priority of some processes
+
+9) What is meant by asynchronously occurring interrupts?
+     The interrupt may occur at an arbitrary time with respect to program execution    
+
+10) What is meant by synchronously occurring interrupts?
+    Synchronously occurring interrupts typically occur while under CPU control and are caused by or on behalf of the currently executing process.
+
+11) When an interrupt occurs, the rip and rFlags registers are pushed on the stack. Much like the call statement, the rip register is pushed to save the return address. Explain why is the rFlag register pushed on the stack.
+    The rFlags flag register must be preserved immediately since the interrupt may have been generated asynchronously and those registers will change as successive instructions are executed
+
+12) Name two hardware interrupts.
+    Keyboard, Network adapter
+
+13) List one way for a program to generate an exception.
+    Accessing invalid memory address
+
+14) What is the difference between a maskable and non-maskable interrupt?
+    The priority and critical status is the main difference, the maskable interrupt are of less importance that the non-maskable interrupt.

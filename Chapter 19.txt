@@ -17,7 +17,7 @@
     Many resources to solve one problem/ Limitation of communication through a network
 
 7) Provide one advantage and one disadvantage of the multiprocessing approach to parallel processing.
-    Fast comminication between processes and threads/ Limitation of number of cores or resources
+    Fast communication between processes and threads/ Limitation of number of cores or resources
 
 8) Explain what a race condition is.
     A race condition is a set of rules followed by threads when they are working on the same project
