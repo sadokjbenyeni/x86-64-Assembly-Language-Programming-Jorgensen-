@@ -1,0 +1,29 @@
+1) Explain the difference between concurrency and parallel processing.
+    Both imply the use of several processers while in the case of concurrency these processors could be independant, in the other case of parallel processing they are working together.
+
+2) Name the two common approaches to parallel computations.
+    Either each execute on a seprate process or both share the same process
+
+3) In distributed processing, where might the parallel computations take place?
+    In different computers connected by a network
+
+4) Provide the names of two examples of large distributed computing projects. Include a one-sentence description of each.
+    Albert@home, DreamLab (https://en.wikipedia.org/wiki/List_of_volunteer_computing_projects)
+
+5) In multiprocessing, where might the parallel computations take place?
+    On memory
+
+6) Provide one advantage and one disadvantage of the distributed computing approach to parallel processing.
+    Many resources to solve one problem/ Limitation of communication through a network
+
+7) Provide one advantage and one disadvantage of the multiprocessing approach to parallel processing.
+    Fast comminication between processes and threads/ Limitation of number of cores or resources
+
+8) Explain what a race condition is.
+    A race condition is a set of rules followed by threads when they are working on the same project
+
+9) Will a race condition occur when a shared variable is read by multiple simultaneously executing threads?
+    No
+
+10) Will a race condition occur when a shared variable is written by multiple simultaneously executing threads (without any coordination)?
+    Yes
