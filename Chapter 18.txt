@@ -5,10 +5,10 @@
     32 bits by single precision and 64 bits by double precision
 
 3) Explain why 0.1 added 10 times does not equal 1.0.
-     Due to rounding errors
+    Cumulative rounding error associated with the inexact representation of 0.1 in binary.
 
 4) Where is the result of a value returning floating-point function such as sin(x) returned?
-    dword 
+    xmm0 
 
 5) For a value returning floating-point function, which floating-point registers must be preserved across the function call?
-    rFlag
+    None is preserved

@@ -2,7 +2,7 @@
     - ddd <program>
 
 2) What option is required during the assemble and link step in order to ensure the program be easily debugged.
-    - -g dwarf2
+    - -g option
 
 3) What does the run command do specifically?
     - Execute the program to the first breakpoint

@@ -2,7 +2,7 @@
     Both imply the use of several processers while in the case of concurrency these processors could be independant, in the other case of parallel processing they are working together.
 
 2) Name the two common approaches to parallel computations.
-    Either each execute on a seprate process or both share the same process
+    Distributed computing and multiprocessing.
 
 3) In distributed processing, where might the parallel computations take place?
     In different computers connected by a network
@@ -11,19 +11,19 @@
     Albert@home, DreamLab (https://en.wikipedia.org/wiki/List_of_volunteer_computing_projects)
 
 5) In multiprocessing, where might the parallel computations take place?
-    On memory
+    On different cores in the CPU.
 
 6) Provide one advantage and one disadvantage of the distributed computing approach to parallel processing.
-    Many resources to solve one problem/ Limitation of communication through a network
+    Distributed computing allows a very large number of compute nodes but requires communications over a network which has inherent communication delays.
 
 7) Provide one advantage and one disadvantage of the multiprocessing approach to parallel processing.
-    Fast communication between processes and threads/ Limitation of number of cores or resources
+    Multiprocessing allows very fast communications between processes via shared memory but supports only a limited amount of simultaneous executing threads related to the number of cores available.
 
 8) Explain what a race condition is.
-    A race condition is a set of rules followed by threads when they are working on the same project
+    Multiple threads simultaneously writing to a shared variable with no control or coordination.
 
 9) Will a race condition occur when a shared variable is read by multiple simultaneously executing threads?
-    No
+    No. No problem exists since the variable is not being changed.
 
 10) Will a race condition occur when a shared variable is written by multiple simultaneously executing threads (without any coordination)?
-    Yes
+    Yes. Since the variable is being changed, one thread may alter the value after the other has obtained the value.

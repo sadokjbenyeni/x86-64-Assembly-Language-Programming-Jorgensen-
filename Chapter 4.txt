@@ -14,10 +14,10 @@
     .text
 
 6) What is the data declaration for each of the following variables with the given values:
-    byte sized variable bNum set to  1010: bNum db  1010  
-    word sized variable wNum set to  10,29110: wNun dw  10,29110
-    double-word sized variable dwNum set to  2,126,01010: dwNum dd 2,126,01010
-    quadword sized variable qwNum set to  10,000,000,00010: qwNum   dq  10,000,000,00010
+    byte sized variable bNum set to  1010: bNum db  10  
+    word sized variable wNum set to  10,29110: wNun dw  10,291
+    double-word sized variable dwNum set to  2,126,01010: dwNum dd 2,126,010
+    quadword sized variable qwNum set to  10,000,000,00010: qwNum   dq  10,000,000,000
  
 7) What is the uninitialized data declaration for each of the following:
     byte sized array named bArr with 100 elements:  bArr resb 100

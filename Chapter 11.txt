@@ -14,4 +14,4 @@
     - It is legal and might be useful to call a macro from another or to exit the macro to go back to the main program 
 
 6) When does the macro argument substitution occur? 
-    - During macro call
+    - During assemble time

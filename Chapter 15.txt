@@ -14,7 +14,7 @@
     Is a sequence of NOP (no-operation) instructions meant to "slide" the CPU's instruction execution flow to its final, desired destination whenever the program branches to a memory address anywhere on the slide.
 
 6) The text example injected code to open a new shell. Provide at least one different idea for injected code that would cause problems.
-    Enter excessive data through shell as hex values to override the value of rip
+    Many possible answers. Delete a file, open a network connection, kill a process, etc.
 
 7) Name three techniques designed to prevent stack buffer overflow attacks.
     Canaries, data execution prevention, data address space layout randomization

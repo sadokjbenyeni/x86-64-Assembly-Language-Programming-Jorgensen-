@@ -5,7 +5,7 @@
     Loading secondary memory storage data in the primary memory storage
 
 3) In reference to a high-level language, where are the I/O buffering routines located?
-    In the operation system
+    They are in the language I/O library functions (i.e., cout, cin, etc.).
 
 4) What is the advantage of hiding the I/O buffering complexity from the programmer?
     Ease for the programmer
@@ -38,4 +38,4 @@
     To ensure that the text line array is not overwritten
 
 14) How does the presented algorithm ensure that the very first call the myGetLine() will read the buffer?
-    Status value is TRUE
+    By initializing the variables to indicate that all buffer characters have been read

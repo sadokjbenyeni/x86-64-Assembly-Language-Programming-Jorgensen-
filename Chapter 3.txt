@@ -53,7 +53,7 @@ FFFFFFF8: -8
 +11.25:     0x41340000
 −17.125:    0xC1890000
 +21.875:    0x41AF0000
-−0.75:      0x7FC00000
+−0.75:      0xBF400000
  
 10) What is the ASCII code, in hex, for each of the following characters:
 “A”:        0x41

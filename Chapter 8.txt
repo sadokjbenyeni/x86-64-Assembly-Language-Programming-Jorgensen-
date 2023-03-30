@@ -1,6 +1,6 @@
 1) Explain the difference between the following two instructions:
     1. mov     rdx, qword [qVar1] ; Assigns the value of qVar1 to rdx.
-    2. mov     rdx, qVar1         ; Assigns the address of qVars to rdx. 
+    2. mov     rdx, qVar1         ; Assigns the address of qVar1 to rdx. 
 
 2) What is the address mode of the source operand for each of the instructions listed below. Respond with Register, Immediate, Memory, or Illegal Instruction.
     mov    <dest>, <source>       
@@ -36,5 +36,5 @@ What would be in the eax and edx registers after execution? Show answer in hex, 
     lp: add eax, dword [lst+rsi]
             add     rsi, 4
             loop    lp
-            mov     ebx, dword [lst]    ; eax: 0x000B  ebx: 0x0002  rcx: 0x0002  rsi: 0x0011
+            mov     ebx, dword [lst]    ; eax: 0x0009  ebx: 0x0002  rcx: 0x0000  rsi: 0x000C
 What would be in the eax, ebx, rcx, and rsi registers after execution? Show answer in hex, full register size. Note, pay close attention to the register sizes (32-bit vs. 64-bit).

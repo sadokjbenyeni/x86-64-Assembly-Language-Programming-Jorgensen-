@@ -1,14 +1,14 @@
 1) What is an algorithm?
-    - An algorithm is a transformed idea to a certain programming language
+    - An unambiguous, ordered sequence of steps involved in solving a problem.
 
 2) What are the four main steps in algorithm development?
-    - Problem study/Algorithm writing/Program implementation/Debugging and testing
+    - Understand the Problem/Create the Algorithm/Implement the Program/Test/Debug the Program
 
 3) Are the four main steps in algorithm development applicable only to assembly language programming?
     - No, any programming language
 
 4) What type of error, if any, occurs if the one operand multiply instruction uses an immediate value operand? Respond with assemble-time or run-time.
-    - Run-time
+    - Assemble-time
 
 5) If an assembly language instruction is spelled incorrectly (e.g., “mv” instead of “mov”), when will the error be found? Respond with assemble-time or run-time.
     - Assemble-time

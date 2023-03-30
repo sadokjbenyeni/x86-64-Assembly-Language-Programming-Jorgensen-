@@ -1,14 +1,14 @@
 1) When using a system service, where is the call code placed?
-    - Within the operating system
+    - rax register
 
 2) Where is the code located when the syscall instruction is executed?
-    - The code is placed in rax register
+    - Operating system
 
 3) What is the call code and required arguments for a system service call to perform console output?
-    - call code = sys_write(1), argumets = Output location, address of characters to output, number of characters to output.
+    - The call code is SYS_write (1). The  1st argument in rdi is the output location STDOUT, the 2nd argument in rsi is the starting address of the characters to output, and the 3rd argument in rdx is the number of characters to write.
 
 4) Why was only one character read for interactive keyboard input?
-    - Because reading a whole line could include LF (line feed) which can be counted as a character while it is not.
+    - It is unknown how many characters will be entered.
 
 5) What is returned for a successful file open system service call?
     - The file descriptor is returned
@@ -17,4 +17,4 @@
     - A negative value specific to the type of error encountered
 
 7) If a system service call requires six (6) arguments, where specifically should they be passed?
-    - They are placed in the standard argument registers
+    -  In: rdi, rsi, rdx, r10, r8, and r9

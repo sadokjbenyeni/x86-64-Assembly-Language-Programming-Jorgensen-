@@ -9,7 +9,7 @@ _____|___________|________________ BUS
     - Bus(Interconnection)
 
 3) Where are programs stored when the computer is turned off?
-    = Second storage (ROM)
+    - Second storage (ROM)
 
 4) Where must programs be located when they are executing?
     - Primary storage (RAM)
@@ -24,13 +24,13 @@ _____|___________|________________ BUS
     - 1 byte
 
 8) Given the 32-bit hex  004C4B4016
-  what is the: Least Significant Byte (LSB): 6
-               Most Significant Byte (MSB): 0
+  what is the: Least Significant Byte (LSB): 4016
+               Most Significant Byte (MSB): 0016
 
 9) Given the 32-bit hex  004C4B4016
  , show the little-endian memory layout showing each byte in memory.
  31 30 29 28 27 26 25 24 23 22 21 20 19 18 17 16 15 14 13 12 11 10 9 8 7 6 5 4 3 2 1 0
-  |     4     |     C     |     4     |     B     |    4     |    0    |   1   |  6   |            
+  |     0     |     0     |     4     |     C     |    4     |    B    |   4   |  0   |            
 
 10) Draw a picture of the layout for the rax register.
 rax = |      32 bits            |                 eax(32bits)                   |
@@ -55,10 +55,11 @@ rax = |      32 bits            |                 eax(32bits)                   
     - Stack Pointer Register
 
 14) If al is set to 0516 and ax is set to 000716, eax is set to 0000002016, and rax is set to 000000000000000016, and show the final complete contents of the complete rax register.
+    - rax = 0000000000000000
 
 15) If the rax register is set to  81,985,529,216,486,89510  (123456789ABCDEF16), what are the contents of the following registers in hex?
 
-1. al = 16
-2. ax = EF 16
-3. eax = ABCD EF16
-4. rax = 2345 6789 ABCD EF16
+1. al = EF
+2. ax = CDEF
+3. eax = 89ABCDEF
+4. rax = 0123456789ABCDEF
